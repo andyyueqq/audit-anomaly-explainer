@@ -2,7 +2,9 @@
 
 An AI-powered Streamlit app that helps internal auditors investigate flagged journal entry anomalies and draft structured audit observations, grounded in company accounting policies via RAG (Retrieval-Augmented Generation).
 
-![App Screenshot](docs/screenshot_main.png)
+<p align="center">
+  <img src="docs/screenshot_dashboard.png" width="90%" alt="Dashboard Overview"/>
+</p>
 
 ---
 
@@ -22,27 +24,20 @@ An AI-powered Streamlit app that helps internal auditors investigate flagged jou
 
 ### Architecture
 
-The system has four main components:
+```mermaid
+flowchart LR
+    A["📄 Journal Entry\nUpload\n(CSV / XLSX)"] -->|raw data| B["🔍 Anomaly\nDetector\n(5 algorithms)"]
+    B -->|flagged entries\nwith severity| C["⚠️ Flagged\nAnomalies"]
+    C -->|query by flag reason\n+ account info| D["📚 Policy Index\n(FAISS + Gemini\nEmbeddings)"]
+    D -->|top-k policy\nchunks| E["🤖 Gemini LLM\n(with policy\ncontext)"]
+    E -->|structured output| F["📝 Audit\nObservation\n(5-part format)"]
 
-```
-┌─────────────────┐     ┌──────────────────┐     ┌─────────────────┐
-│  Journal Entry   │────▶│ Anomaly Detector │────▶│  Flagged Items  │
-│  Upload (CSV/    │     │ (5 detection     │     │  with severity  │
-│   XLSX)          │     │  algorithms)     │     │  + explanations │
-└─────────────────┘     └──────────────────┘     └────────┬────────┘
-                                                          │
-                         ┌──────────────────┐             │
-                         │  Policy Index    │◀────────────┘
-                         │  (FAISS + Gemini │    query by flag reason
-                         │   Embeddings)    │    + account info
-                         └────────┬─────────┘
-                                  │ top-k chunks
-                                  ▼
-                         ┌──────────────────┐     ┌─────────────────┐
-                         │  Gemini LLM      │────▶│ Structured Audit│
-                         │  (with policy    │     │ Observation     │
-                         │   context)       │     │ (5-part format) │
-                         └──────────────────┘     └─────────────────┘
+    style A fill:#1e3a5f,stroke:#60a5fa,color:#fff
+    style B fill:#7c3aed,stroke:#a78bfa,color:#fff
+    style C fill:#dc2626,stroke:#fca5a5,color:#fff
+    style D fill:#0d9488,stroke:#5eead4,color:#fff
+    style E fill:#2563eb,stroke:#93c5fd,color:#fff
+    style F fill:#16a34a,stroke:#86efac,color:#fff
 ```
 
 ### Component Details
@@ -138,20 +133,26 @@ The evaluation scores each observation on 4 dimensions (1–4 scale):
 
 ## 4. Artifact Snapshot
 
-### Main Dashboard
-The app displays a dark-themed dashboard with severity metrics, a donut chart showing high vs. medium severity distribution, and a horizontal bar chart breaking down anomaly types.
+### Main Dashboard — Anomaly Detection Results
+The app displays severity metrics, a donut chart (high vs. medium), and a bar chart breaking down anomaly types.
 
-### Observation Detail
-Each observation is displayed with:
-- Color-coded section headings (Condition in blue, Criteria in purple, Cause in amber, Effect in red, Recommendation in green)
-- Entry details grid (date, accounts, amount, user, description)
-- Plain-language explanation of why the entry was flagged
-- Supporting policy excerpts with relevance scores
-- Accept/Revise workflow buttons
-- Completeness warning if any section is missing
+<p align="center">
+  <img src="docs/screenshot_detection.png" width="90%" alt="Anomaly Detection Results"/>
+</p>
+
+### Observation Detail — Color-Coded Audit Findings
+Each observation shows color-coded section headings, entry details, plain-language flag explanations, and supporting policy excerpts with relevance scores.
+
+<p align="center">
+  <img src="docs/screenshot_observation.png" width="90%" alt="Observation Detail"/>
+</p>
 
 ### Export Options
-Results can be exported as CSV (for spreadsheets), Markdown (for reports), or Word DOCX (for formal documentation).
+Results can be exported as CSV, Markdown, or Word DOCX.
+
+<p align="center">
+  <img src="docs/screenshot_export.png" width="60%" alt="Export Options"/>
+</p>
 
 ### Sample Output
 
