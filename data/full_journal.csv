@@ -1,0 +1,51 @@
+entry_id,date,account_debit,account_credit,amount,posting_user,description,flag_reason
+JE-1043,2025-12-08,2010 - Accounts Payable,1010 - Cash,18839.26,lpatel,Vendor payment - invoice #71993,"Potential duplicate: same amount ($18,839.26), date (2025-12-08), and accounts"
+JE-1025,2025-12-18,5900 - Insurance Expense,1300 - Prepaid Expenses,24904.97,jgarcia,Monthly insurance expense recording,
+JE-1027,2025-12-15,5200 - Rent Expense,1010 - Cash,7690.75,abrown,Monthly rent expense recording,
+JE-1021,2025-12-29,5700 - Depreciation Expense,1500 - Fixed Assets,6937.17,rjones,Recurring depreciation expense transaction,
+JE-1008,2025-12-20,1200 - Accounts Receivable,4100 - Service Revenue,2869.55,tcheng,Payment for accounts receivable,
+JE-1019,2025-12-13,2010 - Accounts Payable,1010 - Cash,8209.61,lpatel,Standard accounts payable entry,
+JE-1024,2025-12-13,1300 - Prepaid Expenses,1010 - Cash,10842.92,mwilliams,Standard prepaid expenses entry,
+JE-1011,2025-12-25,2010 - Accounts Payable,1010 - Cash,2204.1,klee,Payment for accounts payable,
+JE-1020,2025-12-24,5300 - Utilities Expense,2010 - Accounts Payable,6989.56,klee,Recurring utilities expense transaction,
+JE-1042,2025-12-07,2300 - Deferred Revenue,1400 - Inventory,16088.43,lpatel,Adjustment entry - see supporting memo,Unusual account combination: Deferred Revenue paired with Inventory
+JE-1022,2025-12-17,1200 - Accounts Receivable,4100 - Service Revenue,9368.91,abrown,Standard accounts receivable entry,
+JE-1017,2025-12-26,5100 - Salaries Expense,1010 - Cash,6111.68,jsmith,Payment for salaries expense,
+JE-1039,2025-12-19,4000 - Revenue,1300 - Prepaid Expenses,18890.02,klee,Adjustment entry - see supporting memo,Unusual account combination: Revenue paired with Prepaid Expenses
+JE-1047,2025-12-14,5400 - Office Supplies,1010 - Cash,500000.0,tcheng,Special project - office supplies,"Amount ($500,000) exceeds 100x monthly average ($5,000) for Office Supplies"
+JE-1003,2025-12-08,5100 - Salaries Expense,1010 - Cash,1230.03,klee,Recurring salaries expense transaction,
+JE-1044,2025-12-08,2010 - Accounts Payable,1010 - Cash,18839.26,lpatel,Vendor payment - invoice #71993,"Potential duplicate: same amount ($18,839.26), date (2025-12-08), and accounts"
+JE-1041,2025-12-03,1500 - Fixed Assets,4000 - Revenue,45554.74,tcheng,Adjustment entry - see supporting memo,Unusual account combination: Fixed Assets paired with Revenue
+JE-1010,2025-12-19,5200 - Rent Expense,1010 - Cash,14025.0,tcheng,Period-end rent expense accrual,
+JE-1015,2025-12-06,5900 - Insurance Expense,1300 - Prepaid Expenses,16056.97,klee,Standard insurance expense entry,
+JE-1045,2025-12-22,1200 - Accounts Receivable,4100 - Service Revenue,5427.38,mwilliams,Vendor payment - invoice #66498,"Potential duplicate: same amount ($5,427.38), date (2025-12-22), and accounts"
+JE-1023,2025-12-05,5200 - Rent Expense,1010 - Cash,19016.66,mwilliams,Period-end rent expense accrual,
+JE-1034,2026-01-06,5200 - Rent Expense,1010 - Cash,78348.84,jsmith,Year-end true-up adjustment,Posted after close date (2026-01-03)
+JE-1026,2025-12-25,1300 - Prepaid Expenses,1010 - Cash,18157.68,jgarcia,Payment for prepaid expenses,
+JE-1031,2026-01-04,5700 - Depreciation Expense,1500 - Fixed Assets,76512.48,rjones,Post-close reclassification,Posted after close date (2026-01-03); user 'rjones' not on approved post-close list
+JE-1002,2025-12-19,5300 - Utilities Expense,2010 - Accounts Payable,18543.54,mwilliams,Standard utilities expense entry,
+JE-1048,2025-12-28,5500 - Travel Expense,2200 - Accrued Liabilities,120000.0,lpatel,Bulk purchase - travel expense,"Amount ($120,000) exceeds 15x monthly average ($8,000) for Travel Expense"
+JE-1037,2025-12-15,5400 - Office Supplies,1010 - Cash,75000.0,tcheng,Strategic advisory fee,"Round-dollar amount ($75,000) above $50K threshold"
+JE-1038,2025-12-08,5100 - Salaries Expense,1010 - Cash,200000.0,klee,Consulting services - Q4 engagement,"Round-dollar amount ($200,000) above $50K threshold"
+JE-1032,2026-01-08,5010 - Cost of Goods Sold,1400 - Inventory,6460.76,jgarcia,Correction entry for prior period,Posted after close date (2026-01-03); user 'jgarcia' not on approved post-close list
+JE-1014,2025-12-23,1010 - Cash,4000 - Revenue,5632.92,jgarcia,Monthly cash recording,
+JE-1033,2026-01-05,5100 - Salaries Expense,1010 - Cash,23065.37,jsmith,Year-end true-up adjustment,Posted after close date (2026-01-03)
+JE-1040,2025-12-08,3000 - Retained Earnings,5800 - Miscellaneous Expense,3337.97,jsmith,Reclassification per management request,Unusual account combination: Retained Earnings paired with Miscellaneous Expense
+JE-1006,2025-12-09,5300 - Utilities Expense,2010 - Accounts Payable,17604.42,tcheng,Period-end utilities expense accrual,
+JE-1001,2025-12-08,1300 - Prepaid Expenses,1010 - Cash,3227.61,jgarcia,Period-end prepaid expenses accrual,
+JE-1004,2025-12-23,5900 - Insurance Expense,1300 - Prepaid Expenses,1150.13,klee,Recurring insurance expense transaction,
+JE-1007,2025-12-04,5400 - Office Supplies,1010 - Cash,23951.72,tcheng,Monthly office supplies recording,
+JE-1036,2025-12-23,5200 - Rent Expense,1010 - Cash,100000.0,klee,Marketing campaign payment,"Round-dollar amount ($100,000) above $50K threshold"
+JE-1046,2025-12-22,1200 - Accounts Receivable,4100 - Service Revenue,5427.38,mwilliams,Vendor payment - invoice #66498,"Potential duplicate: same amount ($5,427.38), date (2025-12-22), and accounts"
+JE-1005,2025-12-26,1200 - Accounts Receivable,4100 - Service Revenue,5900.8,jgarcia,Monthly accounts receivable recording,
+JE-1050,2025-12-26,5800 - Miscellaneous Expense,1010 - Cash,60000.0,tcheng,Bulk purchase - miscellaneous expense,"Amount ($60,000) exceeds 30x monthly average ($2,000) for Miscellaneous Expense"
+JE-1030,2025-12-25,5900 - Insurance Expense,1300 - Prepaid Expenses,5373.32,tcheng,Period-end insurance expense accrual,
+JE-1018,2025-12-30,1200 - Accounts Receivable,4100 - Service Revenue,7059.65,klee,Recurring accounts receivable transaction,
+JE-1012,2025-12-13,5200 - Rent Expense,1010 - Cash,21455.28,mwilliams,Payment for rent expense,
+JE-1028,2025-12-17,2010 - Accounts Payable,1010 - Cash,21958.4,jgarcia,Period-end accounts payable accrual,
+JE-1009,2025-12-30,5100 - Salaries Expense,1010 - Cash,18378.43,mwilliams,Standard salaries expense entry,
+JE-1029,2025-12-27,5700 - Depreciation Expense,1500 - Fixed Assets,22859.38,jgarcia,Recurring depreciation expense transaction,
+JE-1035,2025-12-09,5500 - Travel Expense,2200 - Accrued Liabilities,50000.0,abrown,Strategic advisory fee,"Round-dollar amount ($50,000) above $50K threshold"
+JE-1049,2025-12-02,5300 - Utilities Expense,2010 - Accounts Payable,85000.0,mwilliams,Special project - utilities expense,"Amount ($85,000) exceeds 28x monthly average ($3,000) for Utilities Expense"
+JE-1013,2025-12-06,5010 - Cost of Goods Sold,1400 - Inventory,16074.27,tcheng,Payment for cost of goods sold,
+JE-1016,2025-12-22,1200 - Accounts Receivable,4100 - Service Revenue,7113.72,klee,Payment for accounts receivable,
