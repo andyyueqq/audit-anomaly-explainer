@@ -1161,3 +1161,16 @@ st.markdown("""
     Always verify citations against source documents. This tool assists with drafting — it does not replace professional audit judgment.
 </div>
 """, unsafe_allow_html=True)
+
+st.markdown("""
+<div style="background: rgba(30,58,95,0.4); border: 1px solid #1e3a5f; border-radius: 10px;
+            padding: 1rem 1.25rem; margin-top: 1rem; font-size: 0.92rem;">
+    🔒 <strong style="color:#60a5fa;">Data Privacy Notice</strong><br>
+    <span style="color:#cbd5e1;">
+        When generating observations, journal entry details (accounts, amounts, descriptions) are sent to the
+        Google Gemini API for processing. Do not upload real company data unless your organization permits
+        third-party AI processing of financial information. This prototype uses synthetic data for demonstration purposes.
+        API keys are stored only in your local session and are never logged or persisted.
+    </span>
+</div>
+""", unsafe_allow_html=True)

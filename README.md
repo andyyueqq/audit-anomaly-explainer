@@ -264,6 +264,22 @@ audit-anomaly-explainer/
 └── .gitignore
 ```
 
+## Security & Data Privacy
+
+This tool processes financial data that may be sensitive. Users should be aware of the following:
+
+| Concern | Current Handling | Production Recommendation |
+|---|---|---|
+| **API key storage** | Not committed to Git; entered via sidebar or `.env` file | Use a secrets manager (e.g., GCP Secret Manager) |
+| **Data sent to external LLM** | Journal entry details (accounts, amounts, users, descriptions) are sent to Google Gemini API for observation generation | For production use with real financial data, deploy a self-hosted LLM or use an enterprise API with data processing agreements |
+| **Uploaded files** | Processed in-memory via Streamlit; not persisted to disk beyond the session | Add file size validation, content sanitization, and automatic session cleanup |
+| **Exported reports** | Downloaded as plain-text CSV/DOCX with no encryption | Add watermarking or encryption for sensitive audit findings |
+| **Session data** | Stored in Streamlit `session_state` (server-side, cleared on disconnect) | For multi-user deployment, add authentication and session isolation |
+
+**Important:** This prototype uses synthetic data and is designed for educational demonstration. Before using with real company data, ensure compliance with your organization's data classification and third-party data processing policies.
+
+---
+
 ## Limitations
 
 - **Drafts only:** All generated observations require auditor review before use in any audit report.
